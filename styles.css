@@ -23,7 +23,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 h1 {
@@ -44,12 +44,22 @@ h1 {
   border-bottom-left-radius: 16px;
 }
 
+.red-lit {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #fe433e, 0 0 30px #fe433e,
+    0 0 40px #fe433e, 0 0 50px #fe433e;
+}
+
 #green {
   background-color: #3bca49;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-right-radius: 16px;
+}
+
+.green-lit {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #3bca49, 0 0 30px #3bca49,
+    0 0 40px #3bca49, 0 0 50px #3bca49;
 }
 
 #blue {
@@ -60,6 +70,11 @@ h1 {
   border-top-left-radius: 16px;
 }
 
+.blue-lit {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #1477d7, 0 0 30px #1477d7,
+    0 0 40px #1477d7, 0 0 50px #1477d7;
+}
+
 #yellow {
   background-color: #feda30;
   border-bottom-left-radius: 50%;
@@ -68,14 +83,28 @@ h1 {
   border-top-right-radius: 16px;
 }
 
+.yellow-lit {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #feda30, 0 0 30px #feda30,
+    0 0 40px #feda30, 0 0 50px #feda30;
+}
+
 .btn {
-  transition: all 0.2s;
-  border: 2.5px solid #111;
+  transition: transform 0.2s, box-shadow 0.05s;
+  border: 2px solid #111;
 }
 
 .btn:hover {
   cursor: pointer;
-  transform: scale(1.01);
+  transform: scale(1.02);
+}
+
+.pressed {
+  background-color: #444 !important;
+  box-shadow: 0 0 20px white;
+}
+.game-over {
+  background-color: red;
+  opacity: 0.8;
 }
 
 @media screen and (min-width: 800px) {
