@@ -72,6 +72,15 @@ $(document).on("keydown", function () {
   }
 });
 
+$("body").on("tap", function () {
+  if (!started) {
+    $("p").hide();
+    started = true;
+    flashAll();
+    setTimeout(nextSequence, 800);
+  }
+});
+
 $(".btn").on("click", function (event) {
   userChoice(event.currentTarget.id);
 });
