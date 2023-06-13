@@ -5,6 +5,7 @@ let level = 0;
 let started = false;
 
 function nextSequence() {
+  started = true;
   userPattern = [];
   let randomNum = Math.floor(Math.random() * 4);
   let randomColor = buttonColors[randomNum];
@@ -66,16 +67,15 @@ function animatePress(currentColor) {
 $(document).on("keydown", function () {
   if (!started) {
     $("p").hide();
-    started = true;
+
     flashAll();
     setTimeout(nextSequence, 800);
   }
 });
 
-$("body").on("tap", function () {
+$(".btn").on("click", function () {
   if (!started) {
     $("p").hide();
-    started = true;
     flashAll();
     setTimeout(nextSequence, 800);
   }
